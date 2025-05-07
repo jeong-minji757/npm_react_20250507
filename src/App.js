@@ -1,12 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import LinkCp from './components/LinkCp';
+import ListCP from './components/ListCp';
 
 function App() {
+  const menuArr = ['intro', 'skill', 'portfolio', 'contact'];
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        {/* <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
@@ -16,7 +20,19 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+        </a> */}
+        <div className = 'logo'>
+          {/* <a href='/'>LOGO</a> */}
+          <LinkCp hrefpr='/' textpr='LOGO' />
+        </div>
+
+        <nav>
+          <ul>
+            {menuArr.map((v)=>(
+              <ListCP hrefPr={`/${v}`} textPr={v} />
+            ))} 
+          </ul>
+        </nav>
       </header>
     </div>
   );

@@ -6,8 +6,8 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
+  <React.StrictMode> {/* 정적인 모드 > 그대로 그려줌 */}
+    <App />{/* 교체품태그 > App.js에서 app태그안에 내용으로 대체 */}
   </React.StrictMode>
 );
 
